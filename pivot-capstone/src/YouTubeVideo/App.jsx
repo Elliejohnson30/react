@@ -100,29 +100,40 @@ const App = () => {
         </header>
 
         {/* Trending Movies */}
-        {trendingMovies.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold mb-3">Trending Movies</h2>
-            <ul className="flex overflow-x-auto space-x-3 pb-2">
-              {trendingMovies.map((movie, index) => (
-                <li
-                  key={movie.$id}
-                  className="min-w-[100px] flex-shrink-0 text-center bg-white text-gray-900 shadow rounded-md p-2"
-                >
-                  <p className="text-xs font-semibold text-gray-500 mb-1">
-                    {index + 1}
-                  </p>
-                  <img
-                    src={movie.poster_url}
-                    alt={movie.title}
-                    className="w-[100px] h-[150px] object-cover rounded"
-                  />
-                  <p className="mt-1 text-xs truncate">{movie.title}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+      {trendingMovies.length > 0 && (
+  <section className="mb-10">
+    <h2 className="text-xl font-bold mb-3">Trending Movies</h2>
+   <ul className="flex overflow-x-auto space-x-16 pb-2 px-2">
+  {/* Smaller spacer so number 1 is visible but closer to the left */}
+  <div className="w-[40px] flex-shrink-0" />
+
+  {trendingMovies.map((movie, index) => (
+    <li
+      key={movie.$id}
+      className="relative flex-shrink-0 bg-white text-gray-900 shadow rounded-md p-2 overflow-visible"
+    >
+      <span className="absolute top-2 -left-10 text-[100px] font-extrabold text-transparent outlined-number-glow z-10">
+        {index + 1}
+      </span>
+      <img
+        src={movie.poster_url}
+        alt={movie.title}
+        className="w-[100px] h-[150px] object-cover rounded"
+      />
+      <p className="mt-1 text-xs truncate text-center">{movie.title}</p>
+    </li>
+  ))}
+</ul>
+
+
+
+
+  </section>
+)}
+
+
+
+
 
         {/* All Movies */}
         <section>

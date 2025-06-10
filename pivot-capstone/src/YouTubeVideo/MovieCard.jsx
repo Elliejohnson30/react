@@ -3,7 +3,7 @@ import React from 'react'
 const MovieCard = ({ movie: { title, vote_average, poster_path, release_date, original_language }
 }) => {
     return (
-       <div className="bg-white text-gray-900 rounded-lg shadow overflow-hidden">
+       <div className="bg-red-800 text-gray-900 rounded-lg shadow overflow-hidden">
   {/* Movie Poster */}
   <img
     src={poster_path

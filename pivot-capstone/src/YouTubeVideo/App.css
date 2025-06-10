@@ -17,6 +17,13 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.outlined-number-glow {
+  -webkit-text-stroke: 3px white;
+  text-stroke: 3px white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6);
+}
+
 
 
 @keyframes logo-spin {
